@@ -1,0 +1,23 @@
+﻿@model OMS_NEW.Models.User_Login_form
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/User_master.cshtml";
+    }
+<link href="~/Content/style.css" rel="stylesheet" />
+<section id="loginForm">
+<h1>Use previously registered Mobile No for log in.</h1>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+        <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Mobile)
+                @Html.TextBoxFor(m => m.Mobile)
+                @Html.ValidationMessageFor(m => m.Mobile)
+            </li>
+        </ol>
+        <input type="submit" value="Log in" />
+    </fieldset>
+}
+</section>

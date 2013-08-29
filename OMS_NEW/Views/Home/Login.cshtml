@@ -1,0 +1,30 @@
+﻿@model OMS_NEW.Models.LoginModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = "~/Views/Shared/Emp_master.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+<section id="loginForm">
+<h1>Employee Login form</h1>
+@using (Html.BeginForm("home", "Cms", FormMethod.Post, new { id = "comform" }))
+{
+    @Html.ValidationSummary(true)
+        <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Emp_ID)
+                @Html.TextBoxFor(m => m.Emp_ID)
+                @Html.ValidationMessageFor(m => m.Emp_ID)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+        </ol>
+            <a href="@Url.Action("home","Cms", new { comtype = 0 })">Log in</a>
+    </fieldset>
+}
+      
+</section>

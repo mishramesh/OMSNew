@@ -1,0 +1,73 @@
+/* CSS Document */
+#trigger {
+	text-align:center;
+}
+
+/* Style you custom popupbox according to your requirement */
+.popupbox {
+    background-color:#FFFFFF;
+    border-bottom-color:#E60000;
+	width:500px;
+	height:300px;
+	background-repeat:no-repeat;
+	display: none; /* Hidden as default */
+	float: left;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+}
+.popupbox2 {
+	width:454px;
+	height:307px;
+	background-image:url(/edit_media/2010/201010/20101009/custompopup/images/pu_03.png);
+	background-repeat:no-repeat;
+	display: none; 
+	float: left;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+}
+.popupbox3 {
+	width:502px;
+	height:302px;
+	background-image:url(/edit_media/2010/201010/20101009/custompopup/images/3_03.png);
+	background-repeat:no-repeat;
+	display: none;
+	float: left;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+}
+#fade { 
+	display: none; /* Hidden as default */
+	background: #FFFFFF;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: .30;
+	z-index: 9999;
+}
+#intabdiv {
+	text-align:center;
+}
+
+
+#intabdiv1 {
+    text-align:center;
+}
+#intabdiv2 {
+	text-align:center;
+}
+
+
+#intabdiv3 {
+	text-align:center;
+}

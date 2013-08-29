@@ -1,0 +1,207 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "CMS";
+}
+@using OMS_NEW.Controllers
+@model OMS_NEW.Models.cms
+@section title {
+    <section>
+        <link rel="stylesheet" href="../../Content1/style1.css" type="text/css" />
+        <link rel="stylesheet" href="../../Content1/popups.css" type="text/css" />
+        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta2)/IE8.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../../Content1/scripts.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../../Content1/custom.js"></script>
+    </section>
+}
+
+
+@section topheader {
+    <section>
+        <div class="menu_area">
+            <ul id="nav">
+                <li><a href="#" class="menu">Admin</a>
+                    <ul>
+                        @{
+                            CmsController cms = new CmsController();
+                            List<string> company = cms.FetchCompany();
+                            List<string[,]> circle = cms.FetchCircle();
+                            List<string[,]> division = cms.FetchDivision();
+                            List<string[,]> subdivision = cms.FetchSubdivision();
+                            List<string[,]> faultcat = cms.FetchFaultCat();
+                            foreach (string temp in company)
+                            {
+                            <li><a href="#">@temp</a>
+                                <ul>
+                                    @foreach (string[,] tempcircle in circle)
+                                    {
+                                        if (temp.Equals(tempcircle[0, 0].ToString()))
+                                        {
+                                        <li><a href="#">@tempcircle[0, 1]</a>
+                                            <ul>
+                                                @foreach (string[,] tempdivision in division)
+                                                {
+                                                    if (tempcircle[0, 1].ToString().Equals(tempdivision[0, 0].ToString()))
+                                                    {
+                                                    <li><a href="#">@tempdivision[0, 1]</a>
+
+                                                        <ul>
+                                                            @foreach (string[,] tempsubdivision in subdivision)
+                                                            {
+                                                                if (tempdivision[0, 1].ToString().Equals(tempsubdivision[0, 0].ToString()))
+                                                                {
+                                                                <li><a href="#">@tempsubdivision[0, 1]</a></li>
+                                                                }
+                                                            }
+                                                        </ul>
+                                                    </li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </li>
+                                        }
+                                    }
+                                </ul>
+                            </li>                        
+                            }                        
+                        }
+                    </ul>
+                </li>
+                <li><a href="@Url.Action("home", "Cms", new { comtype = 0 })" class="menu" >Complaint Registration</a>
+                    <ul>
+                        @{
+                            foreach (string[,] temp in faultcat)
+                            {
+                            <li><a href="@Url.Action("home", "Cms", new { comtype = Int16.Parse(temp[0, 0]) })" >@temp[0, 1]</a> </li>
+                            }
+                            
+                        }
+                    </ul>
+                </li>
+                <li><a href="@Url.Action("status", "Cms")" class="menu">Status</a></li>
+
+            </ul>
+        </div>
+    </section>
+}
+
+@section footercontent {
+    <section>
+        <div id="fotter_1">
+            <div class="fotter_links">
+                <div align="center">
+                    <a  href="@Url.Action("Index", "Home")" class="fotterlink">Home</a>
+                    |<a  href="@Url.Action("About", "Home")" class="fotterlink">About Us</a>
+                    |<a  href="@Url.Action("Support", "Home")" class="fotterlink">Support</a>
+                    |<a  href="@Url.Action("Contact", "Home")" class="fotterlink">Contact Us</a>
+                </div>
+            </div>
+            <div class="fotter_copyrights">
+                <div align="center">Copyright Information Goes Here. All Rights Reserved</div>
+            </div>
+        </div>
+    </section>
+}
+
+
+
+<div id="body_area">
+    <table border="1" style="width: 100%">
+        <tr>
+            <th style="width: 60%; height: 10px">COMPLAINT REGISTRATION (@Model.faultcategory)</th>
+            <th>OPEN No Currebt Complaints</th>
+        </tr>
+        <tr>
+            <td style="vertical-align: top">
+                @using (Html.BeginForm("home", "Cms", FormMethod.Post, new { id = "comform" }))
+                {
+                    <table cellpadding="5px">
+                        <tr>
+                            <td>Current Date & Time:</td>
+                            <td style="padding-left: 12px">@Html.DisplayFor(m => m.Date, new { @id = "Date" })</td>
+                            <td style="padding-left: 152px">Complaint No: </td>
+                            <td style="padding-left: 37px">@Html.TextBoxFor(m => m.complaint_id, new { @readonly = "readonly", @id = "complaint_id" })</td>
+                        </tr>
+                    </table>
+                    <p style="text-align: center; padding-top: 10px; color: red; font-style: oblique">CONSUMER DETAILS</p>
+    
+    
+                    <table style="padding-top: 20px;" cellpadding="5px">
+                        <tr>
+                            <td>Consumer Refrence No:</td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.crn, new { @id = "crn", @onchange = "homedetails()" })</td>
+                            <td style="padding-left: 100px">CA No: </td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.ca, new { @id = "ca", @onchange = "homedetails()" })</td>
+                        </tr>
+                        <tr>
+                            <td>Consumer Name:</td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.consumer_name, new { @id = "consumer_name" })</td>
+                            <td style="padding-left: 100px">Caller Name:</td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.caller_name, new { @id = "caller_name" }) @Html.ValidationMessageFor(m => m.caller_name)</td>
+                        </tr>
+                        <tr>
+                            <td>Consumer No: </td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.contact1, new { @id = "contact1", @onchange = "homedetails()" }) @Html.ValidationMessageFor(m => m.contact1)</td>
+                            <td style="padding-left: 100px">Caller No: </td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.contact2, new { @id = "contact2" }) @Html.ValidationMessageFor(m => m.contact2)</td>
+                        </tr>
+                        <tr>
+                            <td>Consumer Address: </td>
+                            <td style="padding-left: 10px">@Html.TextAreaFor(m => m.address, new { @id = "address", }) </td>
+                            <td style="padding-left: 100px">Landmark: </td>
+                            <td style="padding-left: 10px">@Html.TextAreaFor(m => m.landmark, new { @id = "landmark" })</td>
+                        </tr>
+                        <tr>
+                            <td>Area :</td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.area, new { @id = "area" })</td>
+                            <td style="padding-left: 100px">Complaint Centre:</td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.complaintcentre, new { @id = "complaintcentre" }) @Html.ValidationMessageFor(m => m.complaintcentre)</td>
+                        </tr>
+                        <tr>
+                            <td>Type of Fault:</td>
+                            <td style="padding-left: 10px">@Html.DropDownListFor(m => m.typeoffault, ViewData["typeoffault"] as IEnumerable<SelectListItem>, "--SELECT--", new { @id = "tfault" })  @Html.ValidationMessageFor(m => m.typeoffault)</td>
+                            <td style="padding-left: 100px">Reason : </td>
+                            <td style="padding-left: 10px">@Html.TextBoxFor(m => m.reason, new { @id = "reason" })</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <button type="button" name="Save" value="Save" style="height: 30px; width: 50px; margin-left: 500px" onclick="homesave()">Save</button>
+                    <button type="button" name="Clear" value="Clear" style="height: 30px; width: 50px; margin-left: 20px">Clear</button>
+                }
+            </td>
+            <td style="">
+                <div style="overflow: scroll; overflow-style: scrollbar; height: 400px">
+                    @Html.Action("openNcc", "Cms")
+                </div>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+<script lang="javascript">
+    function homedetails() {
+        var form = $("form#comform");
+        form.attr("action", "/Cms/homedetails");
+        form.submit();
+    }
+
+
+    function homesave() {
+        var form = $("form#comform");
+        form.attr("action", "/Cms/homesave");
+        form.submit();
+    }
+
+</script>
+
+
+
+
+
+

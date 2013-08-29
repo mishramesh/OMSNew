@@ -1,0 +1,29 @@
+﻿@model IEnumerable<OMS_NEW.Models.openNcc>
+<table>
+<tr>
+<th>Employee ID</th>
+<th>Employee Name</th>
+<th>Employee Department</th>
+<th>Action</th>
+</tr>
+@foreach (var m in Model)
+{
+    <tr>
+        <td>
+            @m.EmpId
+        </td>
+        <td>
+            <div id="divEmpName-@m.EmpId.ToString()" class="visible">@m.EmployeeName</div>
+            <input id="txtEmpName-@m.EmpId.ToString()" type="text" class="hide" value=@m.EmployeeName.ToString() />
+        </td>
+        <td>
+            <div id="divEmpDep-@m.EmpId.ToString()"  class="visible">@m.EmployeeDep</div>
+            <input id="txtEmpDep-@m.EmpId.ToString()" type="text"  class="hide" value=@m.EmployeeDep.ToString() />
+        </td>
+        <td>
+            <button id="btnEdit-@m.EmpId.ToString()"  class="visible" onclick="ShowEdit(@m.EmpId); return false;">Edit</button>
+            <button id="btnSave-@m.EmpId.ToString()"  class="hide" onclick="SaveEdit(@m.EmpId); return false;">Save</button>
+        </td>
+    </tr>
+}
+</table>

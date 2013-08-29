@@ -1,0 +1,18 @@
+﻿@if(Session["user"]!=null)
+{
+   <a href="#"  class="user"> Hello @Session["User"] Welcome to BSES @ViewBag.title</a>
+     <a href="#"  class="logoff" rel="popuprel3">Log Off</a>
+  
+}
+
+<div class="popupbox" id="popuprel3">
+<div id="intabdiv3">
+    <p>WelCOME TO BSES OMS SYSTEM</p>
+            <table style="width:100%; height:80%"><tr><td>Are you sure </td><td>
+                   <input type="text" name="contact" value="contact"  style="width:100%;"/></td>
+             </tr>
+                </table>
+          </div>
+</div>
+
+<div id="fade"></div>

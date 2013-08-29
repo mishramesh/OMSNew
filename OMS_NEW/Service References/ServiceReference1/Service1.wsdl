@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_Company">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_CompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CompanyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Circle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="circle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CircleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CircleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Division">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="circle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="divisionc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DivisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DivisionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Sub_Division">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subdivision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subdivision_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="division" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="divisionc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Sub_DivisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Sub_DivisionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Complaint_Centre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facilityid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subdivision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subdivisionc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Complaint_CentreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Complaint_CentreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_CompanySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Company" />
+  </wsdl:message>
+  <wsdl:message name="Get_CompanySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CircleSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Circle" />
+  </wsdl:message>
+  <wsdl:message name="Get_CircleSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CircleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_DivisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Division" />
+  </wsdl:message>
+  <wsdl:message name="Get_DivisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DivisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Sub_DivisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Sub_Division" />
+  </wsdl:message>
+  <wsdl:message name="Get_Sub_DivisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Sub_DivisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Complaint_CentreSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Complaint_Centre" />
+  </wsdl:message>
+  <wsdl:message name="Get_Complaint_CentreSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Complaint_CentreResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_Company">
+      <wsdl:input message="tns:Get_CompanySoapIn" />
+      <wsdl:output message="tns:Get_CompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Circle">
+      <wsdl:input message="tns:Get_CircleSoapIn" />
+      <wsdl:output message="tns:Get_CircleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Division">
+      <wsdl:input message="tns:Get_DivisionSoapIn" />
+      <wsdl:output message="tns:Get_DivisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sub_Division">
+      <wsdl:input message="tns:Get_Sub_DivisionSoapIn" />
+      <wsdl:output message="tns:Get_Sub_DivisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Complaint_Centre">
+      <wsdl:input message="tns:Get_Complaint_CentreSoapIn" />
+      <wsdl:output message="tns:Get_Complaint_CentreSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Company">
+      <soap:operation soapAction="http://tempuri.org/Get_Company" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Circle">
+      <soap:operation soapAction="http://tempuri.org/Get_Circle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Division">
+      <soap:operation soapAction="http://tempuri.org/Get_Division" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sub_Division">
+      <soap:operation soapAction="http://tempuri.org/Get_Sub_Division" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Complaint_Centre">
+      <soap:operation soapAction="http://tempuri.org/Get_Complaint_Centre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Company">
+      <soap12:operation soapAction="http://tempuri.org/Get_Company" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Circle">
+      <soap12:operation soapAction="http://tempuri.org/Get_Circle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Division">
+      <soap12:operation soapAction="http://tempuri.org/Get_Division" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sub_Division">
+      <soap12:operation soapAction="http://tempuri.org/Get_Sub_Division" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Complaint_Centre">
+      <soap12:operation soapAction="http://tempuri.org/Get_Complaint_Centre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://10.125.117.108/Web_service/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://10.125.117.108/Web_service/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

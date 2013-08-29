@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>OMS</title>
+    <link href="../../Content1/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../Content1/popups.css" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Content1/loginjs.js"></script>
+    @RenderSection("title", required: false)
+</head>
+<body>
+
+    <div id="topheader">
+        <div class="top_strip">
+            @Html.Partial("_LoginPartial")
+        </div>
+        @RenderSection("topheader", required: false)
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div id="fotter">
+        @RenderSection("footercontent", required: false)
+    </div>
+</body>
+</html>

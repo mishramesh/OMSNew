@@ -1,0 +1,46 @@
+﻿@using OMS_NEW.Controllers
+@model OMS_NEW.Models.User_update_detail
+@{
+    Layout = "~/Views/Shared/Emp_master.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+<section id="loginform">
+    <h3>User Mobile no updation form.</h3>
+@using (Html.BeginForm("Update_user_detail", "Home", FormMethod.Post, new { id = "detail" }))
+   {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Registraon Form</legend>
+        <ol>
+            <li>        
+                @Html.LabelFor(m => m.Mob1)
+                @Html.TextBoxFor(m=> m.Mob1)
+                @Html.ValidationMessageFor(m => m.Mob1)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Mob2)
+                @Html.TextBoxFor(m => m.Mob2)
+                @Html.ValidationMessageFor(m => m.Mob2)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob3)
+                @Html.TextBoxFor(m => m.Mob3)
+                @Html.ValidationMessageFor(m => m.Mob3)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob4)
+                @Html.TextBoxFor(m => m.Mob4)
+                @Html.ValidationMessageFor(m => m.Mob4)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob5)
+                @Html.TextBoxFor(m => m.Mob5)
+                @Html.ValidationMessageFor(m => m.Mob5)
+            </li>
+            <li> @Html.TextBoxFor(m=> m.CA_NO,new { style = "display: none;" })</li>
+        </ol>
+        <input type="submit" name="Command" value="Update" />
+    </fieldset>
+   }
+    </section>
+

@@ -1,0 +1,71 @@
+﻿@model OMS_NEW.Models.Employee
+@{
+    ViewBag.Title = "EmployeeRegistration";
+    Layout = "~/Views/Shared/Emp_master.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+
+<section id="EmployeeRegistration">
+    <h1>Employee Registration form</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Registration Form</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.ID)
+                    @Html.TextBoxFor(m => m.ID)
+                    @Html.ValidationMessageFor(m => m.ID).
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name)
+                    @Html.ValidationMessageFor(m => m.Name)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Department)
+                    @Html.DropDownListFor(m => m.Department, new SelectList(ViewBag.Dept_name, "Value", "Text"), "Select Department name", new { @id = "fcat" })
+                    @Html.ValidationMessageFor(m => m.Department)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Company)
+                    @Html.DropDownListFor(m => m.Company, new SelectList(ViewBag.Company, "Value", "Text"), "Select Company name", new { @id = "abc" })
+                    @Html.ValidationMessageFor(m => m.Company)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Circle)
+                    @Html.TextBoxFor(m => m.Circle)
+                    @Html.ValidationMessageFor(m => m.Circle)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Division)
+                    @Html.TextBoxFor(m => m.Division)
+                    @Html.ValidationMessageFor(m => m.Division)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.SubDivision)
+                    @Html.TextBoxFor(m => m.SubDivision)
+                    @Html.ValidationMessageFor(m => m.SubDivision)
+
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Substation)
+                    @Html.TextBoxFor(m => m.Substation)
+                    @Html.ValidationMessageFor(m => m.Substation)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.MobileNo)
+                    @Html.TextBoxFor(m => m.MobileNo)
+                    @Html.ValidationMessageFor(m => m.MobileNo)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.ComplaintCenter)
+                    @Html.TextBoxFor(m => m.ComplaintCenter)
+                    @Html.ValidationMessageFor(m => m.ComplaintCenter)
+                </li>
+            </ol>
+            <input type="submit" value="Register" />
+        </fieldset>
+    }
+</section>

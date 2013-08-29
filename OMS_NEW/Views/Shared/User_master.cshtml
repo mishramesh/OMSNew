@@ -1,0 +1,35 @@
+﻿<html>
+	<head>
+		<title>BSES Yamuna Power Limited</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <script src="~/JS/viewport.js"></script>
+        <link href="~/Content/responsive.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="5grid">
+					<div class="12u-first">
+						<!-- Logo -->
+							<h1><a href="#">
+                                <img src="~/Content/Images/BSES_logo.png" /></a>
+                               </h1>
+						<!-- Nav -->
+							<nav>
+                                @Html.ActionLink("Homepage","Index")
+								@Html.ActionLink("Registration","Register")
+                                @Html.ActionLink("Mobile No updation","User_retrive_data")
+                                @Html.ActionLink("User Login","User_login")
+                                @Html.ActionLink("Complaint Status","user_complain_Status")
+							</nav>
+					</div>
+				</header>
+			</div>
+		  <div id="Master">
+            @RenderBody()
+        </div>
+	</body>
+</html>

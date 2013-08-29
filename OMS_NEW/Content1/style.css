@@ -1,0 +1,443 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{
+
+	margin:0;
+	color:#232323;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	background-attachment: scroll;
+	background-image: url(image/bg.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #f2f1df;
+}
+div, h1, h2, h3, h4, p, form, label, input, textarea, img, span{
+	margin:0; padding:0;
+}
+
+ul{
+	margin:0; 
+	padding:0; 
+	list-style-type:none;
+	line-height:0;
+}
+
+
+
+/*------------------------------------------------main--------------------*/
+
+#topheader{
+	width:1004px;
+	height:184px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #dcd66e;
+	text-decoration: none;
+	padding: 0px;
+	float: none;
+	background-image: url(image/logo_banner.jpg);
+	background-repeat: no-repeat;
+}
+.top_strip 
+{
+    margin-left:16%;
+	float: left;
+	height: 23px;
+	width: 366px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 579px;
+}
+
+.customer {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #090909;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+.customer:hover {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #af0602;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+
+
+
+.employee {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #090909;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 25px;
+}
+.employee:hover {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #af0602;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 25px;
+}
+
+
+
+.freeregistration {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #090909;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+.freeregistration:hover {
+	font-family: Arial;
+	font-size: 9px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #af0602;
+	text-decoration: none;
+	background-image: url(image/topmenu_02.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 16px;
+	width: 80px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+
+.user {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight:600;
+	text-transform: capitalize;
+    text-align:center;
+  vertical-align:central;
+	color: #FF0000;
+	text-decoration: none;
+	background-image: url(image/User-icon.png);
+	background-repeat: no-repeat;
+    background-color:white;
+	margin: 0px;
+	float: left;
+	height: 18px;
+	width: 100px;
+	padding-top: 9px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+
+
+
+
+.logoff {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight:600;
+	text-transform: capitalize;
+    text-align:center;
+  vertical-align:central;
+	color: #FF0000;
+	text-decoration: none;
+	background-image: url(image/exit.png);
+	background-repeat: no-repeat;
+    background-color:white;
+    margin-left:5px;
+	float: left;
+	height: 18px;
+	width: 100px;
+	padding-top: 9px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+.logoff:hover {
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: #af0602;
+	text-decoration: none;
+	background-image: url(image/exit.png);
+	background-repeat: no-repeat;
+	 margin-left:5px;
+	float: left;
+	height: 18px;
+	width: 100px;
+	padding-top: 9px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 22px;
+}
+
+
+
+
+
+
+
+
+
+    .menu_area {
+	float: left;
+	height: 34px;
+	width: 636px;
+	margin-top: 100px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 200px;
+	padding: 0px;
+}.menu {
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 22px;
+	padding-top: 12px;
+	padding-right: 13px;
+	padding-bottom: 0px;
+	padding-left: 13px;
+}
+.menu:hover {
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #353131;
+	margin: 0px;
+	float: left;
+	height: 22px;
+	padding-top: 12px;
+	padding-right: 13px;
+	padding-bottom: 0px;
+	padding-left: 13px;
+}
+.menu_hover {
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #353131;
+	margin: 0px;
+	float: left;
+	height: 22px;
+	padding-top: 12px;
+	padding-right: 13px;
+	padding-bottom: 0px;
+	padding-left: 13px;
+	cursor:text;
+}
+/*------------------------------------------------fotter--------------------*/
+#fotter{
+	margin: 0 auto;
+    width:100%;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #dcd66e;
+	text-decoration: none;
+	padding: 0px;
+	float: left;
+	height: 103px;
+	background-image: url('image/fotter.jpg');
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+#fotter_1{
+	margin: 0 auto;
+    width:941px;
+	height:113px;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #dcd66e;
+	text-decoration: none;
+	padding: 0px;
+	float: none;
+}
+.fotter_links {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 20px;
+	width: 100%;
+	color: #FFFFFF;
+	padding-top: 35px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.fotter_copyrights {
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 20px;
+	width: 100%;
+	color: #c2c093;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+/*------------------------------------------------fotterlinks --------------------*/
+a.fotterlink:link {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
+a.fotterlink:visited {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
+a.fotterlink:hover {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #c2c093;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
+a.fotterlink:active{
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 5px;
+	padding-left: 5px;
+
+}
+

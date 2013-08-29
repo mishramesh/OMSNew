@@ -1,0 +1,79 @@
+﻿@model OMS_NEW.Models.user_complain_reg
+<html>
+	<head>
+		<title>BSES Yamuna Power Limited</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <script src="~/JS/viewport.js"></script>
+        <link href="~/Content/responsive.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="5grid">
+					<div class="12u-first">
+						<!-- Logo -->
+							<h1><a href="#">
+                                <img src="~/Content/Images/BSES_logo.png" /></a>
+                               </h1>
+						<!-- Nav -->
+							<nav>
+                                @Html.ActionLink("Homepage","Index")
+								@Html.ActionLink("Registration","Register")
+                                @Html.ActionLink("Mobile No updation","User_retrive_data")
+                                @Html.ActionLink("Logout","User_login")
+							</nav>
+					</div>
+				</header>
+			</div>
+  <div id="Master">
+            <section id="loginform">
+<h1>User No Current Complaint registration form</h1>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>NC Complaint form </legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.CA_NO)
+                @Html.TextBoxFor(m => m.CA_NO)
+                @Html.ValidationMessageFor(m => m.CA_NO)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Consumer_name)
+                @Html.TextBoxFor(m => m.Consumer_name)
+                @Html.ValidationMessageFor(m => m.Consumer_name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Mob)
+                @Html.TextBoxFor(m => m.Mob)
+                @Html.ValidationMessageFor(m => m.Mob)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Address)
+                @Html.TextBoxFor(m => m.Address,new { style = "width: 500px;" ,cols = 35, @rows = 3})
+                @Html.ValidationMessageFor(m => m.Address)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.typeoffault)
+                @Html.DropDownListFor(m =>m.typeoffault,new SelectList (ViewBag.type_of_fault,"Value","Text"),"Select type of fault",new { @id="fault"})
+                @Html.ValidationMessageFor(m => m.typeoffault)
+            </li>
+               <li>
+                @Html.LabelFor(m => m.Remark)
+                @Html.TextBoxFor(m => m.Remark,new { style = "width: 500px;" ,cols = 35, @rows = 3})
+                @Html.ValidationMessageFor(m => m.Remark)
+            </li>
+            
+          
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+    </section>
+        </div>
+	</body>
+</html>

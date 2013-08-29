@@ -1,0 +1,25 @@
+﻿@using OMS_NEW.Controllers
+@model OMS_NEW.Models.User_update_detail
+@{
+    Layout = "~/Views/Shared/User_master.cshtml";
+}
+<link href="~/Content/style.css" rel="stylesheet" />
+<section id="loginform">
+<h1>Enter CA Number for Mobile number updation </h1>
+@using (Html.BeginForm("User_retrive_data", "Home", FormMethod.Post, new { id = "detail" }))
+   {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Registraon Form</legend>
+        <ol>
+            <li>                                                                                                
+                @Html.LabelFor(m => m.CA_NO)
+                @Html.TextBoxFor(m => m.CA_NO)
+                @Html.ValidationMessageFor(m => m.CA_NO)
+          </li>
+        </ol>
+        <input type="submit" name="Command" value="Get Detail" />
+    </fieldset>
+   }
+    </section>
+

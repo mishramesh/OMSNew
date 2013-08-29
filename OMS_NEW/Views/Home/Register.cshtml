@@ -1,0 +1,49 @@
+﻿@model OMS_NEW.Models.User_reg_Model
+<link href="~/Content/style.css" rel="stylesheet" />
+@{
+    Layout = "~/Views/Shared/User_master.cshtml";
+}
+<section id="loginform">
+<h1>User Mobile No registration form</h1>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.CA_NO)
+                @Html.TextBoxFor(m => m.CA_NO)
+                @Html.ValidationMessageFor(m => m.CA_NO)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Mob1)
+                @Html.TextBoxFor(m => m.Mob1)
+                @Html.ValidationMessageFor(m => m.Mob1)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Mob2)
+                @Html.TextBoxFor(m => m.Mob2)
+                @Html.ValidationMessageFor(m => m.Mob2)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob3)
+                @Html.TextBoxFor(m => m.Mob3)
+                @Html.ValidationMessageFor(m => m.Mob3)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob4)
+                @Html.TextBoxFor(m => m.Mob4)
+                @Html.ValidationMessageFor(m => m.Mob4) 
+            </li>
+             <li>
+                @Html.LabelFor(m => m.Mob5)
+                @Html.TextBoxFor(m => m.Mob5)
+                @Html.ValidationMessageFor(m => m.Mob5)
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+    </section>
+
