@@ -44,3 +44,15 @@ C:\Users\ACP\Desktop\oms_new06-08\OMS_NEW\bin\Microsoft.Practices.Unity.Intercep
 C:\Users\ACP\Desktop\oms_new06-08\OMS_NEW\obj\Debug\OMS_NEW.csprojResolveAssemblyReference.cache
 C:\Users\ACP\Desktop\oms_new06-08\OMS_NEW\obj\Debug\OMS_NEW.dll
 C:\Users\ACP\Desktop\oms_new06-08\OMS_NEW\obj\Debug\OMS_NEW.pdb
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\OMS_NEW.dll
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\OMS_NEW.pdb
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ACP\OMSFromGit\OMS_NEW\bin\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\ACP\OMSFromGit\OMS_NEW\obj\Debug\OMS_NEW.csprojResolveAssemblyReference.cache
+C:\Users\ACP\OMSFromGit\OMS_NEW\obj\Debug\OMS_NEW.dll
+C:\Users\ACP\OMSFromGit\OMS_NEW\obj\Debug\OMS_NEW.pdb

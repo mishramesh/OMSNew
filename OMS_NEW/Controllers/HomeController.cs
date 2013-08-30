@@ -32,6 +32,12 @@ namespace OMS_NEW.Controllers
             return View();
         }
 
+        public static void Hoolala()
+        {
+
+        }
+
+
         [HttpGet]
         public ActionResult Employee_reg()
         {

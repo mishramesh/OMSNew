@@ -231,8 +231,11 @@
     <Content Include="Global.asax" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\BRPL.png" />
+    <Content Include="Images\BSES %282%29.png" />
     <Content Include="Images\BSES.png" />
+    <Content Include="Images\BSES_logo.png" />
     <Content Include="Images\BYPL.png" />
+    <Content Include="Images\call_center.png" />
     <Content Include="Images\Contact.png" />
     <Content Include="Images\main.png" />
     <Content Include="Images\OMS.png" />
